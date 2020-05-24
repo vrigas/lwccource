@@ -1,0 +1,24 @@
+<template>
+  <lightning-card title={title} icon-name={iconName}>
+    <div class="slds-m-around_small">
+      <div
+        for:each={masterFields}
+        for:item="field"
+        key={field}
+        class="slds-m-bottom_small"
+      >
+        <c-related-fields-info record-id={recordId} master-field={field}>
+        </c-related-fields-info>
+      </div>
+
+      <div class="slds-text-align_right">
+        <lightning-button
+          label="Save"
+          onclick={saveHandler}
+          variant="brand"
+        ></lightning-button>
+      </div>
+    </div>
+    <lightning-spinner if:true={loading}></lightning-spinner>
+  </lightning-card>
+</template>

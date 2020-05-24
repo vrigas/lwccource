@@ -1,0 +1,51 @@
+{
+  "rules": {
+    "no-alert": 2,
+    "semi": [
+      "error",
+      "never"
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "space-before-function-paren": "error",
+    "multiline-comment-style": [
+      "error",
+      "bare-block"
+    ],
+    "spaced-comment": [
+      "error",
+      "always"
+    ],
+    "brace-style": "error",
+    "no-trailing-spaces": "error",
+    "prefer-const": "error",
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120
+      }
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "no-unused-expressions": "error",
+    "no-var": "error",
+    "prefer-arrow-callback": [
+      "error",
+      {
+        "allowNamedFunctions": false
+      }
+    ]
+  },
+  "extends": "@salesforce/eslint-config-lwc/base"
+}

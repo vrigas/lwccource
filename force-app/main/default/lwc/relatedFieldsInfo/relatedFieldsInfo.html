@@ -1,0 +1,47 @@
+<template>
+  <div class="slds-grid" if:true={masterInfo}>
+    <div class="slds-m-right_small slds-m-top_large">
+      <div class={buttonClass}>
+        <lightning-button-icon
+          icon-name="utility:right"
+          variant="bare"
+          size="large"
+          onclick={expandClick}
+        ></lightning-button-icon>
+      </div>
+    </div>
+    <div class="slds-grow">
+      <lightning-input
+        type="text"
+        label={masterInfo.label}
+        value={masterInfo.value}
+        data-name={masterInfo.apiName}
+        disabled={masterReadOnly}
+      ></lightning-input>
+      <div class="slds-m-left_small" if:true={expanded}>
+        <lightning-input
+          type="number"
+          for:each={numberInfo}
+          for:item="field"
+          key={field}
+          label={field.label}
+          value={field.value}
+          data-name={field.apiName}
+          onchange={handleNumberChange}
+        ></lightning-input>
+        <lightning-input
+          type="number"
+          formatter="percent-fixed"
+          step="1"
+          for:each={percentInfo}
+          for:item="field"
+          key={field}
+          label={field.label}
+          value={field.value}
+          data-name={field.apiName}
+          onchange={handlePercentChange}
+        ></lightning-input>
+      </div>
+    </div>
+  </div>
+</template>
