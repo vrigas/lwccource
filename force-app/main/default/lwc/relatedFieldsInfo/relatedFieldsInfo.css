@@ -1,7 +1,0 @@
-.rotatable {
-  transition: transform 250ms ease-out;
-}
-
-.rotated {
-  transform: rotate(90deg);
-}
