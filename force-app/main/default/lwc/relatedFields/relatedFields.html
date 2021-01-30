@@ -1,0 +1,7 @@
+<template>
+  <lightning-card title={title} icon-name={iconName}>
+    <div for:each={allMasterFields} for:item="masterField" key={masterField}>
+      <c-related-fields-info master-field={masterField} record-id={recordId}></c-related-fields-info>
+    </div>
+  </lightning-card>
+</template>

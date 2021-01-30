@@ -1,0 +1,16 @@
+<template>
+  <div class="slds-grid slds-p-around_small">
+    <div class="slds-p-top_large slds-p-right_small">
+      <lightning-button-icon size="large" icon-name={buttonIcon} variant="bare" onclick={clickHandler}></lightning-button-icon>
+    </div>
+    <div class="slds-grow">
+      <lightning-input label={masterField}></lightning-input>
+      <div if:true={expanded} class="slds-p-left_small">
+        <lightning-input label="Sales"></lightning-input>
+        <lightning-input label="Service"></lightning-input>
+        <lightning-input label="Contact Center"></lightning-input>
+      </div>
+    </div>
+  </div>
+  <lightning-spinner if:true={loading}></lightning-spinner>
+</template>
